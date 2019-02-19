@@ -9,13 +9,7 @@ import {HeroService} from '../hero.service';
     styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-    hero:Hero = null;
-
     heroes:Hero[];
-
-    onSelect(hero:Hero):void {
-        this.hero = hero;
-    }
 
     getHeroes():void {
 
