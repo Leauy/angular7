@@ -1,9 +1,28 @@
 <h2>My Heroes</h2>
-
+<div>
+    <label>search:
+        <input #keyword />
+    </label>
+    <button (click)="searchHeroes(keyword.value)">Search</button>
+</div>
 <ul class="heroes">
     <li *ngFor="let item of heroes"
-        [class.selected]="item === hero"
-        routerLink="/detail/{{item.id}}">
-        <span class="badge">{{item.id}}</span>{{item.name}}
+        [class.selected]="item === hero">
+        <span class="badge" routerLink="/detail/{{item.id}}">{{item.id}}</span>{{item.name}}
+        <button class="delete" title="delete hero" (click)="delete(item)">X</button>
     </li>
 </ul>
+
+
+
+<div>
+    <label>Hero name:
+        <input #heroName/>
+    </label>
+
+    <button (click)="add(heroName.value); heroName.value=''">
+        add
+    </button>
+</div>
+
+<app-hero-search></app-hero-search>

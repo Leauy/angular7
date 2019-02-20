@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Hero} from './Hero';
 import {InMemoryDbService} from 'angular-in-memory-web-api';
 import {Observable} from "rxjs/index";
+import {RequestInfo} from 'angular-in-memory-web-api';
 
 @Injectable({
     providedIn: 'root'
